@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const [fullName, setFullName] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,8 +12,10 @@ function App() {
       document.querySelector('input')?.focus();
     } else if (!lastName) {
       document.querySelectorAll('input')[1]?.focus();
-    }
+    } else {
+      setFullName(`${firstName} ${lastName}`);
   }
+}
 
   return (
     <>
@@ -34,6 +37,7 @@ function App() {
       <br /><br />
       <button type="submit">Submit</button>
       </form>
+      {fullName && <h2>Full Name: {fullName}</h2>}
     </>
   )
 }
