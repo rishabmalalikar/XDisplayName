@@ -1,0 +1,14 @@
+.body{
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 145%;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
